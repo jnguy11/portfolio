@@ -1,3 +1,16 @@
+# JOHN NGUY STYLE GUIDE
+
+To start, following the three steps:
+
+1. ensure you're in the styleguide directory
+
+2. npm i
+
+3. npm run
+
+End of steps.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

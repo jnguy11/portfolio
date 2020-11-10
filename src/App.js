@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useReducer } from "react";
+import { Route, Switch } from "react-router-dom";
+import GlobalStyles from "./GlobalStyles";
+import styled from "styled-components";
+
+import Header from "./components/Header";
+import NavBar from "./components/NavBar";
+import Logo from "./pages/Logo";
+import Typography from "./pages/Typography";
+import ColourPalette from "./pages/ColourPalette";
+import Imagery from "./pages/Imagery";
+import Mockup from "./pages/Mockup";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <MainContent>
+        <GlobalStyles />
+        <Header name={"STYLEGUIDE"}/>
+        <BodyCon>
+            <NavBar />
+            <Switch>
+                <Route path="/" component={Logo} exact/>
+                <Route path="/colour" component={ColourPalette} />
+                <Route path="/typography"  component={Typography} />
+                <Route path="/imagery" component={Imagery} />
+                <Route path="/mockup" component={Mockup} />
+            </Switch>
+        </BodyCon>
+    </MainContent>
+
   );
 }
+
+const MainContent = styled.div`
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+`;
+
+const BodyCon = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
 
 export default App;
