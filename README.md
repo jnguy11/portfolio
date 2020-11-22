@@ -1,4 +1,4 @@
-# JOHN NGUY STYLE GUIDE
+# JOHN NGUY PORTFOLIO
 
 To start, following the three steps:
 
