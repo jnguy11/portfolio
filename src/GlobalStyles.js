@@ -54,6 +54,27 @@ const GlobalStyles = createGlobalStyle`
       color: #909497;
   };
 
+  input {
+    padding-left: 1.5%;
+    font-family: Exo, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #909497;
+};
+
+  input:focus, textarea:focus, button:focus {
+    outline-width: 0;
+  }
+
+  textarea {
+    padding-top: 0.25em;
+    padding-left: 1.5%;
+    font-family: Exo, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #909497;
+  };
+
   a {
     font-family: Dosis, sans-serif;
     font-weight: 400;
@@ -86,6 +107,12 @@ const GlobalStyles = createGlobalStyle`
     -webkit-text-fill-color: transparent;
     transition: background-position 0.5s ease;
     text-decoration: none;
+  }
+
+  .particles {
+    z-index: 100;
+    height: 100%;
+    width: 100%;
   }
 
 

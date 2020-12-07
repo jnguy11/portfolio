@@ -9,7 +9,7 @@ export default function Header(props) {
             <HeaderTitle>
                 <LogoConHead>
                     <LogoComp image={{src: "/coloured-logo.png", size: "small"}}/>
-                    <h3 style={{textIndent: "5px"}}>STYLE GUIDE</h3>
+                    <h3 style={{textIndent: "5px"}}>JOHN NGUY</h3>
                 </LogoConHead>
             </HeaderTitle>
         </HeaderCon>
@@ -25,13 +25,17 @@ const LogoConHead = styled.div`
     
 `;
 
-const HeaderCon = styled.div`   
+const HeaderCon = styled.div`  
+    position: absolute;
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 6rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    background-color: black;
+    z-index: 10000000;
 `;
 
 const HeaderTitle = styled.div`

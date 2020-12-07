@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 //import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 export default function NavItem({ details }) {
 
@@ -16,6 +16,11 @@ export default function NavItem({ details }) {
             <>
             <Link 
                 to={details.link}
+                spy={true}
+                smooth={true}
+                duration={500}
+                activeClass="active"
+                className="nav-link"
                 style={{
                     color: "hsl(213, 64%, 59%)",
                     width: "100%",
@@ -36,6 +41,9 @@ export default function NavItem({ details }) {
     } else {
         return (
             <Link 
+                spy={true}
+                smooth={true}
+                duration={500}
                 className="NavLinkItem"
                 to={details.link}
                 style={{

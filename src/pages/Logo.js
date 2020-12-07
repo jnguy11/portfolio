@@ -176,10 +176,12 @@ const Body = styled.div`
     width: 60rem;
 `;
 const Container = styled.div`
-    width: 90rem;
+    padding-top: 2.5%;
+    min-width: 90rem;
     height: auto;
     display: flex;
     flex-direction: column;
+    position: relative;
 `;
 
 const LogoCon = styled.div`

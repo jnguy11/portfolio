@@ -1,24 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Button({ details }) {
+export default function ButtonStale({ details }) {
 
-    function setModalStuff() {
-        details.submit(details.modal);
-        details.setModal(true);
-    }
     return (
         <CustomButton
-            onClick={() => {details.modal ? setModalStuff() : console.log("nothing")}}
             style={{
-                height: details.height ? details.height : "2.5rem",
-                width: details.width ? details.width : "8.5rem"
+                height: "2.5rem",
+                width: "8.5rem"
             }}
         >{details.name}</CustomButton>
     )
 }
 
 const CustomButton = styled.button`
+margin-top: 1.5%;
+    border-radius: 0.25em;
     z-index: 1000;
     width: 8.5rem;
     height: 2.5rem;

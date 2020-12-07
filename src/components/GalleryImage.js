@@ -12,11 +12,12 @@ export default function GalleryImage({ image }) {
 }
 
 const Div = styled.div`
-    width: 48em;
-    height: 30.875em;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `;
 
 const Image = styled.img`
-    width: 48em;
-    height: 30.875em;
+    width: 100%;
+    height: 100%;
 `;

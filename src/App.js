@@ -5,28 +5,38 @@ import styled from "styled-components";
 
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
-import Logo from "./pages/Logo";
+import About from "./pages/About";
 import Typography from "./pages/Typography";
 import ColourPalette from "./pages/ColourPalette";
 import Imagery from "./pages/Imagery";
 import Mockup from "./pages/Mockup";
+import Pages from "./pages/Pages";
+
+import Footer from "./pages/Footer";
+
+import HeroParticles from './pages/HeroParticles';
 
 function App() {
   return (
 
     <MainContent>
         <GlobalStyles />
-        <Header name={"STYLEGUIDE"}/>
+        <HeroParticles />
         <BodyCon>
-            <NavBar />
-            <Switch>
+            <Header name={"STYLEGUIDE"}/>
+            <Content>
+                <NavBar />
+                <Pages />
+            </Content>
+            {/* <Switch>
                 <Route path="/" component={Logo} exact/>
                 <Route path="/colour" component={ColourPalette} />
                 <Route path="/typography"  component={Typography} />
                 <Route path="/imagery" component={Imagery} />
                 <Route path="/mockup" component={Mockup} />
-            </Switch>
+            </Switch> */}
         </BodyCon>
+        <Footer />
     </MainContent>
 
   );
@@ -37,10 +47,17 @@ const MainContent = styled.div`
     display: flex;
     flex-direction: column;
 `;
+const Content = styled.div`
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+`;
 
 const BodyCon = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    position: relative;
 `;
 
 export default App;

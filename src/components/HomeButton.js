@@ -1,20 +1,29 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from 'react-scroll';
 
-export default function Button({ details }) {
+export default function HomeButton({ details }) {
 
     function setModalStuff() {
         details.submit(details.modal);
         details.setModal(true);
     }
     return (
-        <CustomButton
-            onClick={() => {details.modal ? setModalStuff() : console.log("nothing")}}
-            style={{
-                height: details.height ? details.height : "2.5rem",
-                width: details.width ? details.width : "8.5rem"
-            }}
-        >{details.name}</CustomButton>
+        <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+        >
+            <CustomButton
+                onClick={() => {details.modal ? setModalStuff() : console.log("nothing")}}
+                style={{
+                    height: details.height ? details.height : "2.5rem",
+                    width: details.width ? details.width : "8.5rem"
+                }}
+            >{details.name}</CustomButton>
+        </Link>
+
     )
 }
 

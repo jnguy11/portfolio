@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import styled from "styled-components";
@@ -12,30 +12,34 @@ function NavBar() {
     return (
         <Nav>
             <NavCon>
-                <NavItem details={{link: "/", name: "LOGO", focused: focused, setFocused: setFocused}} />
-                <NavItem details={{link: "/colour", name: "COLOUR PALETTE", focused: focused, setFocused: setFocused}} />
-                <NavItem details={{link: "/typography", name: "TYPOGRAPHY", focused: focused, setFocused: setFocused}} />
-                <NavItem details={{link: "/imagery", name: "IMAGERY & ICONS", focused: focused, setFocused: setFocused}} />
-                <NavItem details={{link: "/mockup", name: "MOCKUP", focused: focused, setFocused: setFocused}} />
+                <NavItem details={{link: "home", name: "HOME", focused: focused, setFocused: setFocused}} />
+                <NavItem details={{link: "about", name: "ABOUT", focused: focused, setFocused: setFocused}} />
+                <NavItem details={{link: "projects", name: "PROJECTS", focused: focused, setFocused: setFocused}} />
+                <NavItem details={{link: "contact", name: "CONTACT", focused: focused, setFocused: setFocused}} />
             </NavCon>
         </Nav>
     );
 }
 
 const Nav = styled.div`
-    min-width: 15rem;
+    position: absolute;
+    position: sticky;
+    left: 0;
+    top: 22%;
+    width: 15rem;
     height: 30rem;
-    background-color: black;
+    z-index: 1000000;
     display: flex;
     flex-direction: column;
     border-right: 1px solid;
     border-color: #525456;
-    justify-content: flex-end;
+    justify-content: flex-start;
 `;
 
 const NavCon = styled.div`
     height: 100%;
     width: 100%;
+    min-width: 12.5em;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
